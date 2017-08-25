@@ -12,19 +12,6 @@ This ColdBox Module can be installed using CommandBox:
 box install GoogleAnalyticsMeasurementProtocol
 ```
 
-
-
-### ColdBox Module
-If you are using Coldbox 4.3 or later, we recommend to setup the Api in your central Coldbox.cfc config like
-
-```
- 	moduleSettings = {
-    		mailchimpV3 = {
-        		apikey='YOUR API Key goes here'
-    	  	}
-
-```
-
 ## Usage
 ```
 var mp=getModel('MeasurementProtocol');
