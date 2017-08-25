@@ -1,0 +1,88 @@
+{
+    "name":"GoogleAnalyticsMeasurementProtocol",
+    "version":"0.9.0",
+    "author":"Aktiogo Team",
+    "location":"https://github.com/akitogo/GoogleAnalyticsMeasurementProtocol/archive/master.zip",
+    "directory":"",
+    "createPackageDirectory":true,
+    "packageDirectory":"",
+    "homepage":"https://github.com/akitogo/GoogleAnalyticsMeasurementProtocol",
+    "documentation":"",
+    "repository":{
+        "type":"GIT",
+        "URL":"https://github.com/akitogo/GoogleAnalyticsMeasurementProtocol.git"
+    },
+    "bugs":"",
+    "slug":"GoogleAnalyticsMeasurementProtocol",
+    "shortDescription":"Track anything within Google Analytics which can not use the GA Javascript tracking code",
+    "description":"",
+    "instructions":"",
+    "changelog":"",
+    "type":"modules",
+    "keywords":"GoogleAnalytics",
+    "private":false,
+    "engines":[
+        {
+            "type":"",
+            "version":""
+        }
+    ],
+    "defaultEngine":"",
+    "defaultPort":0,
+    "projectURL":"",
+    "license":[
+        {
+            "type":"GPLv3",
+            "url":"https://github.com/akitogo/mailchimpV3/blob/master/LICENSE"
+        }
+    ],
+    "contributors":[
+        
+    ],
+    "dependencies":{
+        
+    },
+    "devDependencies":{
+        
+    },
+    "installPaths":{
+        
+    },
+    "scripts":{
+        
+    },
+    "ignore":[
+        "**/.*",
+        "test",
+        "tests"
+    ],
+    "testbox":{
+        "runner":[
+            {
+                "default":""
+            }
+        ],
+        "labels":[
+            
+        ],
+        "reporter":"",
+        "reporterResults":"",
+        "bundles":[
+            ""
+        ],
+        "directory":{
+            "mapping":"",
+            "recurse":true
+        },
+        "watchers":[
+            
+        ],
+        "notify":{
+            "emails":[
+                
+            ],
+            "growl":"",
+            "URL":""
+        }
+    }
+}
