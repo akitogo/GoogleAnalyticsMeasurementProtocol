@@ -90,7 +90,7 @@ component accessors="true" {
 		};
 		
 		if (len(arguments.pageReferrer)) {
-			event.params.page_referrer = arguments.pageReferrer;
+			event.params["page_referrer"] = arguments.pageReferrer;
 		}
 
 		addLanguageIfSet(event.params);
@@ -230,13 +230,13 @@ component accessors="true" {
 
 	private function addLanguageIfSet(required struct params) {
 		if (len(getLanguage())) {
-			arguments.params.language = getLanguage();
+			arguments.params["language"] = getLanguage();
 		}
 	}
 
 	private function addScreenResolutionIfSet(required struct params) {
 		if (len(getScreen_resolution())) {
-			arguments.params.screen_resolution = getScreen_resolution();
+			arguments.params["screen_resolution"] = getScreen_resolution();
 		}
 	}
 
@@ -251,28 +251,31 @@ component accessors="true" {
 	* Build the complete GA4 payload
 	*/
 	function getPayload() {
+		// IMPORTANT: always assign keys via bracket notation. CFML uppercases
+		// dot-notation struct keys, and GA4 MP rejects the whole payload when it
+		// sees keys like USER_PROPERTIES instead of user_properties.
 		var payload = {
 			"client_id": getClient_id()
 		};
 
 		if (len(getUser_id())) {
-			payload.user_id = getUser_id();
+			payload["user_id"] = getUser_id();
 		}
 
 		if (len(getTimestamp_micros())) {
-			payload.timestamp_micros = getTimestamp_micros();
+			payload["timestamp_micros"] = getTimestamp_micros();
 		}
 
 		if (getNon_personalized_ads() == "true") {
-			payload.non_personalized_ads = true;
+			payload["non_personalized_ads"] = true;
 		}
 
 		var userProps = getUser_properties();
 		if (isStruct(userProps) && !structIsEmpty(userProps)) {
-			payload.user_properties = userProps;
+			payload["user_properties"] = userProps;
 		}
 
-		payload['events'] = getEvents();
+		payload["events"] = getEvents();
 
 		return payload;
 	}
